@@ -2,9 +2,9 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
     "strict": true,
-    "outDir": "./preprocessed",
+    "outDir": "./src/types",
     "declaration": true,
-    "declarationDir": "./types",
+    "declarationDir": "./src",
     "target": "es2020"
   },
   "include": ["src/**/*"],
