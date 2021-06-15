@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { SpinnerTypes } from "../src/types/spinner.type";
+  import type SpinnerTypes from "./spinner";
   import { range, durationUnitRegex } from "./utils";
   export let color: SpinnerTypes["color"] = "#FF3E00";
   export let unit: SpinnerTypes["unit"] = "px";
   export let duration: SpinnerTypes["duration"] = "1.25s";
   export let size: SpinnerTypes["size"] = "60";
 
-  let durationUnit = duration.match(durationUnitRegex)[0];
+  let durationUnit = duration.match(durationUnitRegex)![0];
   let durationNum = duration.replace(durationUnitRegex, "");
 </script>
 

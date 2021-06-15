@@ -1,8 +1,11 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
-    "sourceMap": true,
-    "target": "es2017"
+    "strict": true,
+    "outDir": "./preprocessed",
+    "declaration": true,
+    "declarationDir": "./types",
+    "target": "es2020"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules/*"]

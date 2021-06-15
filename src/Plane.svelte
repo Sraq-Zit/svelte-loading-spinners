@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { SpinnerTypes } from "../src/types/spinner.type";
+  import type SpinnerTypes from "./spinner";
   import { calculateRgba } from "./utils";
   export let color: SpinnerTypes["color"] = "#FF3E00";
   export let unit: SpinnerTypes["unit"] = "px";

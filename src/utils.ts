@@ -1,13 +1,13 @@
 export const durationUnitRegex = /[a-zA-Z]/;
 
-export const calculateRgba = (color, opacity) => {
+export const calculateRgba = (color:string, opacity:number) => {
   if (color[0] === "#") {
     color = color.slice(1);
   }
 
   if (color.length === 3) {
     let res = "";
-    color.split("").forEach((c) => {
+    color.split("").forEach((c: string) => {
       res += c;
       res += c;
     });
@@ -15,13 +15,13 @@ export const calculateRgba = (color, opacity) => {
   }
 
   const rgbValues = (color.match(/.{2}/g) || [])
-    .map((hex) => parseInt(hex, 16))
+    .map((hex:string) => parseInt(hex, 16))
     .join(", ");
 
   return `rgba(${rgbValues}, ${opacity})`;
 };
 
-export const range = (size, startAt = 0) =>
+export const range = (size: number, startAt = 0) =>
   [...Array(size).keys()].map(i => i + startAt);
 
 // export const characterRange = (startChar, endChar) =>
