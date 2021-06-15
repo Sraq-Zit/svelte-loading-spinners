@@ -2,7 +2,7 @@
   "name": "svelte-loading-spinners",
   "version": "0.1.5",
   "svelte": "src/index.js",
-  "module": "dist/index.js",
+  "module": "dist/index.mjs",
   "main": "dist/index.js",
   "types": "src/types/index.d.ts",
   "scripts": {
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/schum123/svelte-loading-spinners#readme",
   "description": "Loading spinners using the svelte framework.",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-typescript": "^8.2.1",
     "@tsconfig/svelte": "^2.0.1",

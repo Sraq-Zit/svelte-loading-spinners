@@ -1,5 +1,6 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import pkg from './package.json';
 import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
@@ -16,16 +17,15 @@ export default {
 		{ 
 			file: pkg.module, 
 			format: "es",
-			banner
 		},
 		{ 
 			file: pkg.main, 
 			format: "umd",
 			name,
-			banner
 		}
 	],
 	plugins: [
+    commonjs(),
     typescript(),
       svelte({
         preprocess: sveltePreprocess(),
