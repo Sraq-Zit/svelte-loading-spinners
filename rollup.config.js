@@ -12,14 +12,23 @@ const name = pkg.name
 
 export default {
 	input: 'src/index.ts',
-	output: 
-		{ file: pkg.main, 'format': 'esm', name }
-	,
+	output: [
+		{ 
+			file: pkg.module, 
+			format: "es",
+			banner
+		},
+		{ 
+			file: pkg.main, 
+			format: "umd",
+			name,
+			banner
+		}
+	],
 	plugins: [
-
     typescript(),
       svelte({
-        preprocess: sveltePreprocess({hydratable:true}),
+        preprocess: sveltePreprocess(),
       }),
 		resolve(),
 		postcss({extract: true, extract: "bundle.css", sourceMap: "inline", minimize: false, plugins: [require('autoprefixer')]}),

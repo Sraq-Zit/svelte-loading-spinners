@@ -9,7 +9,7 @@
     "prebuild": "rm -rf ./dist",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "yarn run build",
     "svelte-check": "svelte-check --tsconfig tsconfig.json --threshold error",
     "svelte2dts": "svelte2dts --overwrite --runOnTs ./src"
   },
