@@ -1,5 +1,6 @@
 <script lang="ts">
   import type SpinnerTypes from "./spinner";
+import BarLoader from "./types/BarLoader.svelte";
   import { calculateRgba, range } from "./utils";
   export let color: SpinnerTypes["color"] = "#FF3E00";
   export let unit: SpinnerTypes["unit"] = "px";
@@ -71,7 +72,7 @@
   }
 </style>
 
-<div class="wrapper" style="--size: {size}{unit}; --rgba:{rgba}">
+<div class="wrapper" style="--size: {size}{unit}; --rgba:{rgba}" {...$$props}>
   {#each range(2, 1) as version}
     <div
       class="lines small-lines {version}"
